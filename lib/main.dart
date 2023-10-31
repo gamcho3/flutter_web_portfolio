@@ -1,11 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_web/firebase_options.dart';
-import 'package:flutter_portfolio_web/navigation/navigation_view.dart';
+import 'package:flutter_portfolio_web/main/main_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Future<void> main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,6 +22,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.limeAccent),
           useMaterial3: true,
         ),
-        home: NavigationView());
+        home: MainScreen());
   }
 }
