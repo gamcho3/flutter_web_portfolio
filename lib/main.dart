@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter web',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.limeAccent),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
           useMaterial3: true,
         ),
         home: MainScreen());

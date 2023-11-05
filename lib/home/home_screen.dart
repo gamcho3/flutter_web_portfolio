@@ -6,7 +6,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blueAccent,
+      color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -14,11 +14,8 @@ class HomeScreen extends StatelessWidget {
             children: [
               Card(
                 child: Container(
-                  height: 200,
+                  height: 250,
                 ),
-              ),
-              CircleAvatar(
-                backgroundColor: Colors.amber,
               ),
             ],
           )

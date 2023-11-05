@@ -19,7 +19,6 @@ class _NvigationRailWidgetState extends State<NvigationRailWidget> {
       mainAxisSize: MainAxisSize.min,
       children: [
         NavigationRail(
-            backgroundColor: Colors.white,
             onDestinationSelected: (value) {
               selectedIndex = value;
               setState(() {});
