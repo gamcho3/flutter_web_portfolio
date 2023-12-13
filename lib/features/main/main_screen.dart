@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio_web/main/components/navigation_rail_widget.dart';
-import 'package:flutter_portfolio_web/home/home_screen.dart';
+import 'package:flutter_portfolio_web/features/main/components/navigation_rail_widget.dart';
+import 'package:flutter_portfolio_web/features/home/home_screen.dart';
 import 'package:flutter_portfolio_web/utils/responsive.dart';
 
 class MainScreen extends StatefulWidget {
