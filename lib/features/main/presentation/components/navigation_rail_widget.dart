@@ -1,30 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio_web/features/main/presentation/providers/page_provier.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class NvigationRailWidget extends StatefulWidget {
+class NvigationRailWidget extends ConsumerStatefulWidget {
   const NvigationRailWidget({
     super.key,
   });
 
   @override
-  State<NvigationRailWidget> createState() => _NvigationRailWidgetState();
+  ConsumerState<NvigationRailWidget> createState() =>
+      _NvigationRailWidgetState();
 }
 
-class _NvigationRailWidgetState extends State<NvigationRailWidget> {
-  int selectedIndex = 0;
-
+class _NvigationRailWidgetState extends ConsumerState<NvigationRailWidget> {
   @override
   Widget build(BuildContext context) {
+    int pageIndex = ref.watch(pageProvider);
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
         NavigationRail(
+            groupAlignment: -0.85,
             onDestinationSelected: (value) {
-              selectedIndex = value;
-              setState(() {});
+              ref.read(pageProvider.notifier).update((state) => value);
             },
             labelType: NavigationRailLabelType.all,
-            destinations: <NavigationRailDestination>[
+            leading: Column(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.menu),
+                ),
+                const SizedBox(height: 8),
+              ],
+            ),
+            destinations: const <NavigationRailDestination>[
               NavigationRailDestination(
                   icon: Icon(Icons.home_outlined),
                   selectedIcon: Icon(Icons.home),
@@ -40,8 +51,8 @@ class _NvigationRailWidgetState extends State<NvigationRailWidget> {
                     style: TextStyle(color: Colors.black),
                   )),
             ],
-            selectedIndex: selectedIndex),
-        VerticalDivider(
+            selectedIndex: pageIndex),
+        const VerticalDivider(
           thickness: 1,
           width: 1,
         )

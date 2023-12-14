@@ -9,7 +9,6 @@ class MainRoute extends GoRouteData {
 
   @override
   Widget build(BuildContext context, GoRouterState state) {
-    // TODO: implement build
     return const MainScreen();
   }
 }

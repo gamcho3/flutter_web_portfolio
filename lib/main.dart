@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_web/firebase_options.dart';
-import 'package:flutter_portfolio_web/features/main/main_screen.dart';
+import 'package:flutter_portfolio_web/features/main/presentation/view/main_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 

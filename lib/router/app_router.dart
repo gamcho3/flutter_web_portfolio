@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_web/features/home/home_screen.dart';
-import 'package:flutter_portfolio_web/features/main/main_screen.dart';
+import 'package:flutter_portfolio_web/features/main/presentation/view/main_screen.dart';
 import 'package:flutter_portfolio_web/features/project/project_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
